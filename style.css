@@ -19,3 +19,12 @@
   color: #aaa;
   font-size: 14px;
 }
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 90px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+}

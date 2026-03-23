@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Britto | Creative Designer</title>
+<title>Britto MSN | Cinematic Designer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap" rel="stylesheet">
 
@@ -12,12 +12,27 @@
 body {
   margin: 0;
   font-family: 'Syne', sans-serif;
-  background: #0e0e0e;
+  background: radial-gradient(circle at 20% 30%, #3228ea22, transparent),
+              radial-gradient(circle at 80% 70%, #f4c33022, transparent),
+              #0a0a0a;
   color: #fff;
+  overflow-x: hidden;
+}
+
+/* GLOBAL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 1.2s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 section {
-  padding: 80px 10%;
+  padding: 100px 10%;
 }
 
 /* HERO */
@@ -29,45 +44,93 @@ section {
 }
 
 .hero h1 {
-  font-size: 80px;
+  font-size: 90px;
+  color: #f4c330;
+  text-shadow: 0 0 20px #f4c33055;
+  animation: fadeUp 1.5s ease forwards, float 6s ease-in-out infinite;
 }
 
 .hero p {
   color: #aaa;
+  margin-top: 10px;
+  animation: fadeUp 2s ease forwards;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* FADE */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* WORK */
 .work-item {
   border-top: 1px solid #222;
-  padding: 25px 0;
-  transition: 0.3s;
+  padding: 30px 0;
+  font-size: 20px;
   cursor: pointer;
+  position: relative;
+  transition: 0.4s;
 }
 
 .work-item:hover {
-  padding-left: 20px;
-  color: #ff6a3d;
+  padding-left: 30px;
+  color: #3228ea;
+}
+
+/* GLOW LINE */
+.work-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, #3228ea, #f4c330);
+  transition: 0.5s;
+}
+
+.work-item:hover::after {
+  width: 100%;
 }
 
 /* ABOUT */
 .about p {
-  max-width: 500px;
-  color: #aaa;
+  max-width: 550px;
+  color: #bbb;
 }
 
 /* CONTACT */
 .contact a {
   display: inline-block;
-  margin-top: 20px;
-  color: white;
+  margin-top: 25px;
+  padding: 12px 25px;
+  border: 1px solid #f4c330;
+  color: #f4c330;
   text-decoration: none;
-  border: 1px solid white;
-  padding: 10px 20px;
+  transition: 0.4s;
+  position: relative;
+  overflow: hidden;
 }
 
+/* BUTTON GLOW */
 .contact a:hover {
-  background: white;
+  background: #f4c330;
   color: black;
+  box-shadow: 0 0 20px #f4c33088;
+  transform: translateY(-4px);
 }
 </style>
 </head>
@@ -79,7 +142,7 @@ section {
   <p>Cinematic Visual Designer</p>
 </section>
 
-<section>
+<section class="reveal">
   <h2>Selected Work</h2>
 
   <div class="work-item">Bible Poster Series</div>
@@ -87,15 +150,27 @@ section {
   <div class="work-item">8K Photo Editing</div>
 </section>
 
-<section class="about">
+<section class="about reveal">
   <h2>About</h2>
-  <p>I create cinematic visual designs with deep storytelling, combining spirituality and modern digital aesthetics.</p>
+  <p>I create cinematic visual designs that merge storytelling, spirituality, and high-end digital aesthetics.</p>
 </section>
 
-<section class="contact">
+<section class="contact reveal">
   <h2>Contact</h2>
   <a href="https://wa.me/91YOURNUMBER">Hire Me</a>
 </section>
+
+<script>
+// SCROLL REVEAL
+window.addEventListener("scroll", () => {
+  document.querySelectorAll(".reveal").forEach((el) => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      el.classList.add("active");
+    }
+  });
+});
+</script>
 
 </body>
 </html>

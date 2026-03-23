@@ -1,14 +1,15 @@
-// SCROLL REVEAL
+// SMOOTH SCROLL REVEAL
 window.addEventListener("scroll", () => {
-  document.querySelectorAll(".reveal").forEach((el) => {
+  document.querySelectorAll(".section").forEach((el) => {
     const top = el.getBoundingClientRect().top;
     if (top < window.innerHeight - 100) {
-      el.classList.add("active");
+      el.style.opacity = 1;
+      el.style.transform = "translateY(0)";
     }
   });
 });
 
-// VIDEO HOVER AUTOPLAY
+// VIDEO AUTOPLAY
 document.querySelectorAll("video").forEach(video => {
   video.addEventListener("mouseenter", () => {
     video.play();

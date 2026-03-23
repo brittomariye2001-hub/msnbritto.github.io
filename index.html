@@ -3,262 +3,99 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Britto | Cinematic Designer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+<title>Britto | Creative Designer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-
 body {
   margin: 0;
-  background: #030303;
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+  font-family: 'Syne', sans-serif;
+  background: #0e0e0e;
+  color: #fff;
 }
 
-/* VIDEO BACKGROUND */
-#bg-video {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
+section {
+  padding: 80px 10%;
 }
 
 /* HERO */
-header {
+.hero {
   height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-.hero-content h1 {
-  font-size: 4.5rem;
-  font-family: 'Playfair Display', serif;
-  letter-spacing: 4px;
-  text-shadow: 0 0 40px rgba(255,215,0,0.6);
+.hero h1 {
+  font-size: 80px;
 }
 
-.hero-content p {
+.hero p {
   color: #aaa;
 }
 
-/* BUTTON */
-.btn {
-  margin-top: 25px;
-  padding: 12px 30px;
-  border: 1px solid gold;
-  color: gold;
-  text-decoration: none;
-  transition: 0.4s;
+/* WORK */
+.work-item {
+  border-top: 1px solid #222;
+  padding: 25px 0;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
-.btn:hover {
-  background: gold;
-  color: black;
-  box-shadow: 0 0 25px gold;
-}
-
-/* SECTIONS */
-section {
-  padding: 100px 12%;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 1s;
-}
-
-section.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* GRID */
-.work {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
-
-/* GLASS CARDS */
-.card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-}
-
-.card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.6s;
-}
-
-/* HOVER */
-.card:hover img {
-  transform: scale(1.15);
-  filter: brightness(50%);
-}
-
-.card::after {
-  content: "VIEW";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: gold;
-  opacity: 0;
-  transition: 0.4s;
-}
-
-.card:hover::after {
-  opacity: 1;
-}
-
-/* SLIDER */
-.slider {
-  position: relative;
-  max-width: 600px;
-  margin: auto;
-}
-
-.slider img {
-  width: 100%;
-  display: block;
-}
-
-.before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
+.work-item:hover {
+  padding-left: 20px;
+  color: #ff6a3d;
 }
 
 /* ABOUT */
-.about {
-  text-align: center;
+.about p {
+  max-width: 500px;
+  color: #aaa;
 }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  color: #555;
+/* CONTACT */
+.contact a {
+  display: inline-block;
+  margin-top: 20px;
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 10px 20px;
 }
 
-/* CURSOR GLOW */
-.cursor {
-  position: fixed;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(255,215,0,0.15), transparent);
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: 999;
+.contact a:hover {
+  background: white;
+  color: black;
 }
-
 </style>
 </head>
 
 <body>
 
-<div class="cursor"></div>
-
-<header>
-  <video autoplay muted loop id="bg-video">
-    <source src="bg.mp4" type="video/mp4">
-  </video>
-
-  <div class="hero-content">
-    <h1>BRITTO</h1>
-    <p>Cinematic Visual Designer</p>
-    <a href="https://wa.me/918148829161" target="_blank" class="btn">Hire Me</a>
-  </div>
-</header>
-
-<section class="show">
-  <h2>My Work</h2>
-  <div class="work">
-    <div class="card"><img src="image1.jpg"></div>
-    <div class="card"><img src="image2.jpg"></div>
-    <div class="card"><img src="image3.jpg"></div>
-  </div>
+<section class="hero">
+  <h1>BRITTO</h1>
+  <p>Cinematic Visual Designer</p>
 </section>
 
 <section>
-  <h2>Before / After</h2>
-  <div class="slider">
-    <img src="after.jpg">
-    <img src="before.jpg" class="before" id="beforeImg">
-    <input type="range" min="0" max="100" value="50" id="sliderRange">
-  </div>
-</section>
+  <h2>Selected Work</h2>
 
-<section>
-  <h2>Featured Projects</h2>
-  <div class="work">
-    <a href="https://www.behance.net/brittomsn" target="_blank" class="card">
-      <img src="project1.jpg">
-    </a>
-    <a href="https://www.behance.net/brittomsn" target="_blank" class="card">
-      <img src="project2.jpg">
-    </a>
-  </div>
+  <div class="work-item">Bible Poster Series</div>
+  <div class="work-item">Tarantula Concept Art</div>
+  <div class="work-item">8K Photo Editing</div>
 </section>
 
 <section class="about">
-  <h2>About Me</h2>
-  <p>I create cinematic edits, spiritual visuals, and high-end design experiences.</p>
-
-  <a href="https://www.behance.net/brittomsn" target="_blank" class="btn">
-    View Full Portfolio
-  </a>
+  <h2>About</h2>
+  <p>I create cinematic visual designs with deep storytelling, combining spirituality and modern digital aesthetics.</p>
 </section>
 
-<footer>
-  <p>© 2026 Britto</p>
-</footer>
-
-<script>
-
-/* SCROLL ANIMATION */
-const sections = document.querySelectorAll("section");
-
-const reveal = () => {
-  sections.forEach(sec => {
-    const top = sec.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      sec.classList.add("show");
-    }
-  });
-};
-
-window.addEventListener("scroll", reveal);
-window.addEventListener("load", reveal);
-
-/* CURSOR GLOW */
-const cursor = document.querySelector(".cursor");
-
-document.addEventListener("mousemove", (e) => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
-});
-
-/* BEFORE AFTER SLIDER */
-const slider = document.getElementById("sliderRange");
-const beforeImg = document.getElementById("beforeImg");
-
-slider.addEventListener("input", () => {
-  beforeImg.style.width = slider.value + "%";
-});
-
-</script>
+<section class="contact">
+  <h2>Contact</h2>
+  <a href="https://wa.me/91YOURNUMBER">Hire Me</a>
+</section>
 
 </body>
 </html>

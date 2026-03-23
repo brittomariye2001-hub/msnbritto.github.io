@@ -1,213 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Britto MSN | Cinematic Designer</title>
-
+<title>Britto MSN</title>
+<link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap" rel="stylesheet">
-
-<style>
-body {
-  margin: 0;
-  font-family: 'Syne', sans-serif;
-  background: radial-gradient(circle at 20% 30%, #3228ea22, transparent),
-              radial-gradient(circle at 80% 70%, #f4c33022, transparent),
-              #0a0a0a;
-  color: #fff;
-  overflow-x: hidden;
-}
-
-/* GLOBAL ANIMATION */
-.reveal {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: 1.2s ease;
-}
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-section {
-  padding: 100px 10%;
-}
-
-/* HERO */
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.hero h1 {
-  font-size: 90px;
-  color: #f4c330;
-  text-shadow: 0 0 20px #f4c33055;
-  animation: fadeUp 1.5s ease forwards, float 6s ease-in-out infinite;
-}
-
-.hero p {
-  color: #aaa;
-  margin-top: 10px;
-  animation: fadeUp 2s ease forwards;
-}
-
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(60px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* WORK */
-.work-item {
-  border-top: 1px solid #222;
-  padding: 30px 0;
-  font-size: 20px;
-  cursor: pointer;
-  position: relative;
-  transition: 0.4s;
-}
-
-.work-item:hover {
-  padding-left: 30px;
-  color: #3228ea;
-}
-
-.work-item::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 0;
-  background: linear-gradient(90deg, #3228ea, #f4c330);
-  transition: 0.5s;
-}
-
-.work-item:hover::after {
-  width: 100%;
-}
-
-/* IMAGE PREVIEW */
-.preview {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 300px;
-  pointer-events: none;
-  opacity: 0;
-  transform: scale(0.9);
-  transition: 0.3s ease;
-  z-index: 1000;
-}
-
-.preview img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-}
-
-.preview.active {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* ABOUT */
-.about p {
-  max-width: 550px;
-  color: #bbb;
-}
-
-/* CONTACT */
-.contact a {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 12px 25px;
-  border: 1px solid #f4c330;
-  color: #f4c330;
-  text-decoration: none;
-  transition: 0.4s;
-}
-
-.contact a:hover {
-  background: #f4c330;
-  color: black;
-  box-shadow: 0 0 20px #f4c33088;
-  transform: translateY(-4px);
-}
-</style>
 </head>
 
 <body>
 
+<header>
+  <div class="logo">BRITTO</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
 <section class="hero">
   <h1>BRITTO</h1>
-  <p>Cinematic Visual Designer</p>
+  <p>Minimal. Cinematic. Visual Designer.</p>
 </section>
 
-<section class="reveal">
-  <h2>Selected Work</h2>
+<!-- GRAPHIC DESIGN -->
+<section class="section">
+  <h2>Graphic Designs</h2>
 
-  <div class="work-item" data-img="bible.jpg">Bible Poster Series</div>
-  <div class="work-item" data-img="spider.jpg">Tarantula Concept Art</div>
-  <div class="work-item" data-img="edit.jpg">8K Photo Editing</div>
+  <div class="grid">
+    <img src="design1.jpg">
+    <img src="design2.jpg">
+    <img src="design3.jpg">
+  </div>
+
+  <a href="https://behance.net/YOURPROFILE" class="btn">View on Behance</a>
 </section>
 
-<!-- IMAGE PREVIEW -->
-<div class="preview">
-  <img src="" alt="">
-</div>
+<!-- VIDEO EDITING -->
+<section class="section">
+  <h2>Video Editing</h2>
 
-<section class="about reveal">
-  <h2>About</h2>
-  <p>I create cinematic visual designs that merge storytelling, spirituality, and high-end digital aesthetics.</p>
+  <div class="grid">
+    <video src="video1.mp4" controls></video>
+    <video src="video2.mp4" controls></video>
+    <video src="video3.mp4" controls></video>
+  </div>
+
+  <a href="https://behance.net/YOURPROFILE" class="btn">More Videos</a>
 </section>
 
-<section class="contact reveal">
-  <h2>Contact</h2>
-  <a href="https://wa.me/91YOURNUMBER">Hire Me</a>
+<!-- CTA -->
+<section class="cta">
+  <h2>Let's Work Together</h2>
+  <p>Available for freelance projects</p>
+
+  <a href="https://wa.me/91YOURNUMBER" class="btn">WhatsApp</a>
+  <a href="mailto:your@email.com" class="btn">Email Me</a>
 </section>
 
-<script>
-// SCROLL REVEAL
-window.addEventListener("scroll", () => {
-  document.querySelectorAll(".reveal").forEach((el) => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      el.classList.add("active");
-    }
-  });
-});
-
-// IMAGE PREVIEW SCRIPT
-const items = document.querySelectorAll(".work-item");
-const preview = document.querySelector(".preview");
-const previewImg = preview.querySelector("img");
-
-items.forEach(item => {
-  item.addEventListener("mouseenter", () => {
-    preview.classList.add("active");
-    previewImg.src = item.getAttribute("data-img");
-  });
-
-  item.addEventListener("mouseleave", () => {
-    preview.classList.remove("active");
-  });
-
-  item.addEventListener("mousemove", (e) => {
-    preview.style.top = e.clientY + 20 + "px";
-    preview.style.left = e.clientX + 20 + "px";
-  });
-});
-</script>
+<footer>
+  <p>© 2026 Britto MSN</p>
+</footer>
 
 </body>
 </html>

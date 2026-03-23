@@ -1,0 +1,45 @@
+.section {
+  padding: 80px 10%;
+}
+
+.section h2 {
+  margin-bottom: 30px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.grid img, .grid video {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.grid img:hover, .grid video:hover {
+  transform: scale(1.05);
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid #f4c330;
+  color: #f4c330;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #f4c330;
+  color: black;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 100px 10%;
+}

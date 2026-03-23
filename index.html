@@ -15,6 +15,7 @@ body {
   color: white;
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* HERO */
@@ -25,7 +26,7 @@ header {
   align-items: center;
   flex-direction: column;
   background: radial-gradient(circle at center, #111, #000);
-  position: relative;
+  text-align: center;
 }
 
 header h1 {
@@ -79,10 +80,13 @@ section.show {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
+  display: block;
 }
 
 .card img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: 0.6s;
 }
 
@@ -128,6 +132,7 @@ footer {
   background: radial-gradient(circle, rgba(255,215,0,0.15), transparent);
   pointer-events: none;
   transform: translate(-50%, -50%);
+  z-index: 999;
 }
 
 </style>
@@ -140,28 +145,38 @@ footer {
 <header>
   <h1>BRITTO</h1>
   <p>Cinematic Visual Designer</p>
-  <a href="https://wa.me/8148829161" class="btn">Hire Me</a>
+  <a href="https://wa.me/918148829161" target="_blank" class="btn">Hire Me</a>
 </header>
 
-<section>
+<section class="show">
   <h2>My Work</h2>
   <div class="work">
-    <div class="card"><img src="image1.jpg"></div>
-    <div class="card"><img src="image2.jpg"></div>
-    <div class="card"><img src="image3.jpg"></div>
+
+    <a href="#" class="card">
+      <img src="image1.jpg" alt="Project">
+    </a>
+
+    <a href="#" class="card">
+      <img src="image2.jpg" alt="Project">
+    </a>
+
+    <a href="#" class="card">
+      <img src="image3.jpg" alt="Project">
+    </a>
+
   </div>
 </section>
 
-  <section>
+<section>
   <h2>Featured Projects</h2>
   <div class="work">
 
     <a href="https://www.behance.net/brittomsn" target="_blank" class="card">
-      <img src="project1.jpg">
+      <img src="project1.jpg" alt="Behance Project">
     </a>
 
     <a href="https://www.behance.net/brittomsn" target="_blank" class="card">
-      <img src="project2.jpg">
+      <img src="project2.jpg" alt="Behance Project">
     </a>
 
   </div>
@@ -170,6 +185,10 @@ footer {
 <section class="about">
   <h2>About Me</h2>
   <p>I create cinematic edits, spiritual visuals, and high-end design experiences.</p>
+
+  <a href="https://www.behance.net/brittomsn" target="_blank" class="btn">
+    View Full Portfolio
+  </a>
 </section>
 
 <footer>
@@ -181,14 +200,17 @@ footer {
 /* SCROLL ANIMATION */
 const sections = document.querySelectorAll("section");
 
-window.addEventListener("scroll", () => {
+const reveal = () => {
   sections.forEach(sec => {
     const top = sec.getBoundingClientRect().top;
     if (top < window.innerHeight - 100) {
       sec.classList.add("show");
     }
   });
-});
+};
+
+window.addEventListener("scroll", reveal);
+window.addEventListener("load", reveal);
 
 /* CURSOR GLOW */
 const cursor = document.querySelector(".cursor");

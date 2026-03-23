@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>msnbritto | Cinematic Designer</title>
+<title>Britto | Cinematic Designer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 
@@ -18,25 +18,32 @@ body {
   scroll-behavior: smooth;
 }
 
+/* VIDEO BACKGROUND */
+#bg-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
 /* HERO */
 header {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  background: radial-gradient(circle at center, #111, #000);
   text-align: center;
 }
 
-header h1 {
+.hero-content h1 {
   font-size: 4.5rem;
   font-family: 'Playfair Display', serif;
   letter-spacing: 4px;
-  text-shadow: 0 0 40px rgba(255,215,0,0.5);
+  text-shadow: 0 0 40px rgba(255,215,0,0.6);
 }
 
-header p {
+.hero-content p {
   color: #aaa;
 }
 
@@ -56,7 +63,7 @@ header p {
   box-shadow: 0 0 25px gold;
 }
 
-/* SECTION */
+/* SECTIONS */
 section {
   padding: 100px 12%;
   opacity: 0;
@@ -69,18 +76,21 @@ section.show {
   transform: translateY(0);
 }
 
-/* PORTFOLIO */
+/* GRID */
 .work {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
 }
 
+/* GLASS CARDS */
 .card {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  display: block;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 .card img {
@@ -103,13 +113,31 @@ section.show {
   left: 50%;
   transform: translate(-50%, -50%);
   color: gold;
-  font-size: 1.2rem;
   opacity: 0;
   transition: 0.4s;
 }
 
 .card:hover::after {
   opacity: 1;
+}
+
+/* SLIDER */
+.slider {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+}
+
+.slider img {
+  width: 100%;
+  display: block;
+}
+
+.before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
 }
 
 /* ABOUT */
@@ -143,42 +171,44 @@ footer {
 <div class="cursor"></div>
 
 <header>
-  <h1>BRITTO</h1>
-  <p>Cinematic Visual Designer</p>
-  <a href="https://wa.me/918148829161" target="_blank" class="btn">Hire Me</a>
+  <video autoplay muted loop id="bg-video">
+    <source src="bg.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-content">
+    <h1>BRITTO</h1>
+    <p>Cinematic Visual Designer</p>
+    <a href="https://wa.me/918148829161" target="_blank" class="btn">Hire Me</a>
+  </div>
 </header>
 
 <section class="show">
   <h2>My Work</h2>
   <div class="work">
+    <div class="card"><img src="image1.jpg"></div>
+    <div class="card"><img src="image2.jpg"></div>
+    <div class="card"><img src="image3.jpg"></div>
+  </div>
+</section>
 
-    <a href="#" class="card">
-      <img src="image1.jpg" alt="Project">
-    </a>
-
-    <a href="#" class="card">
-      <img src="image2.jpg" alt="Project">
-    </a>
-
-    <a href="#" class="card">
-      <img src="image3.jpg" alt="Project">
-    </a>
-
+<section>
+  <h2>Before / After</h2>
+  <div class="slider">
+    <img src="after.jpg">
+    <img src="before.jpg" class="before" id="beforeImg">
+    <input type="range" min="0" max="100" value="50" id="sliderRange">
   </div>
 </section>
 
 <section>
   <h2>Featured Projects</h2>
   <div class="work">
-
     <a href="https://www.behance.net/brittomsn" target="_blank" class="card">
-      <img src="project1.jpg" alt="Behance Project">
+      <img src="project1.jpg">
     </a>
-
     <a href="https://www.behance.net/brittomsn" target="_blank" class="card">
-      <img src="project2.jpg" alt="Behance Project">
+      <img src="project2.jpg">
     </a>
-
   </div>
 </section>
 
@@ -218,6 +248,14 @@ const cursor = document.querySelector(".cursor");
 document.addEventListener("mousemove", (e) => {
   cursor.style.left = e.clientX + "px";
   cursor.style.top = e.clientY + "px";
+});
+
+/* BEFORE AFTER SLIDER */
+const slider = document.getElementById("sliderRange");
+const beforeImg = document.getElementById("beforeImg");
+
+slider.addEventListener("input", () => {
+  beforeImg.style.width = slider.value + "%";
 });
 
 </script>

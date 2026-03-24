@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>About — Britto MSN | MFA Creative Designer</title>
+<meta name="description" content="Britto MSN — MFA Fine Arts graduate, 8+ years creative design practice. Brand identity, rebranding, motion graphics, video editing, art direction."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#080808;--bg-2:#0f0f0f;--bg-3:#161616;--gold:#C9A84C;--gold-light:#E2C06A;--gold-border:rgba(201,168,76,.25);--white:#F2EFE8;--white-70:rgba(242,239,232,.7);--white-40:rgba(242,239,232,.4);--border:rgba(242,239,232,.08);--serif:'Cormorant Garamond','Playfair Display',Georgia,serif;--mono:'DM Mono','Courier New',monospace;--sans:'Inter',system-ui,sans-serif;--nav-h:76px;--r:3px;--expo:cubic-bezier(.16,1,.3,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden;cursor:none}
+a{color:inherit;text-decoration:none}ul{list-style:none}button{font-family:inherit}
+.grain{position:fixed;inset:0;z-index:9000;pointer-events:none;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px 200px}
+.cursor{width:8px;height:8px;background:var(--gold);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:10000;transform:translate(-50%,-50%);transition:width .2s,height .2s;mix-blend-mode:difference}
+.cursor-f{width:32px;height:32px;border:1px solid var(--gold-border);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .3s var(--expo),height .3s var(--expo)}
+body.c-hover .cursor{width:18px;height:18px}body.c-hover .cursor-f{width:56px;height:56px;border-color:var(--gold)}
+.container{max-width:1320px;margin:0 auto;padding:0 clamp(24px,5vw,64px)}.section{padding:clamp(80px,10vw,140px) 0}
+.label{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:18px}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .9s var(--expo),transform .9s var(--expo)}.reveal.in{opacity:1;transform:none}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;border-radius:var(--r);cursor:none;position:relative;overflow:hidden;transition:all .3s var(--expo)}
+.btn::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,.07);transform:translateX(-110%) skewX(-10deg);transition:transform .45s var(--expo)}.btn:hover::after{transform:translateX(110%) skewX(-10deg)}
+.btn-primary{background:var(--gold);color:#080808;padding:15px 32px;font-weight:500}.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 10px 40px rgba(201,168,76,.3)}
+.btn-nav{border:1px solid var(--gold-border);color:var(--gold);padding:10px 22px;font-size:10px}.btn-nav:hover{background:var(--gold);color:#080808}
+.btn-lg{padding:19px 40px;font-size:12px}
+/* NAV */
+.nav{position:fixed;inset:0 0 auto;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(24px,5vw,64px);z-index:500;transition:background .4s}
+.nav.scrolled{background:rgba(8,8,8,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav__logo{display:flex;align-items:center;gap:14px}
+.nav__logo-mark{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--gold);letter-spacing:-.03em;line-height:1}
+.nav__logo-text{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--white-40);text-transform:uppercase;padding-left:14px;border-left:1px solid var(--border)}
+.nav__links{display:flex;align-items:center;gap:40px}
+.nav__link{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--white-40);transition:color .2s;position:relative}
+.nav__link::after{content:'';position:absolute;bottom:-5px;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--expo)}
+.nav__link:hover,.nav__link.active{color:var(--white)}.nav__link:hover::after,.nav__link.active::after{transform:scaleX(1)}
+.nav__hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:none;padding:6px}
+.nav__hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:all .3s}
+/* PAGE HERO */
+.page-hero{padding:calc(var(--nav-h) + 80px) clamp(24px,5vw,64px) 80px;max-width:1320px;margin:0 auto;position:relative;overflow:hidden}
+.page-hero__tag{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
+.page-hero__tag::before{content:'';display:block;width:28px;height:1px;background:var(--gold)}
+.page-hero__title{font-family:var(--serif);font-size:clamp(56px,9vw,116px);font-weight:700;line-height:.92;letter-spacing:-.03em;color:var(--white);margin-bottom:0;opacity:0;transform:translateY(28px);animation:fadeUp .9s var(--expo) .15s forwards}
+.page-hero__title em{color:var(--gold);font-style:italic}
+.page-hero__wm{position:absolute;right:-20px;bottom:-20px;font-family:var(--serif);font-size:clamp(80px,14vw,180px);font-weight:700;color:rgba(242,239,232,.025);letter-spacing:-.05em;pointer-events:none;white-space:nowrap;user-select:none}
+@keyframes fadeUp{to{opacity:1;transform:none}}
+/* BIO */
+.bio-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(48px,6vw,100px);align-items:start}
+.bio-portrait{position:relative}
+.bio-portrait__frame{border-radius:var(--r);overflow:hidden;position:relative}
+.bio-portrait__img{width:100%;aspect-ratio:3/4;background:var(--bg-3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center}
+.bio-portrait__initials{font-family:var(--serif);font-size:72px;font-weight:700;color:var(--gold);line-height:1;opacity:.4}
+.bio-portrait__caption{position:absolute;bottom:0;left:0;right:0;background:rgba(8,8,8,.88);backdrop-filter:blur(12px);padding:18px 22px;border-top:1px solid var(--gold-border)}
+.bio-portrait__name{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--white);display:block;margin-bottom:4px}
+.bio-portrait__role{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:block}
+.bio-badge{position:absolute;background:var(--gold);color:#080808;padding:14px 18px;border-radius:var(--r);text-align:center;opacity:0;transform:scale(.85);transition:opacity .5s var(--expo),transform .5s var(--expo)}
+.bio-badge.in{opacity:1;transform:scale(1)}
+.bio-badge--1{top:28px;right:-24px;transition-delay:.3s}
+.bio-badge--2{bottom:90px;right:-24px;transition-delay:.5s}
+.bio-badge__n{display:block;font-family:var(--serif);font-size:26px;font-weight:700;line-height:1}
+.bio-badge__l{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;opacity:.65;margin-top:3px}
+.bio-text p{font-size:clamp(15px,1.4vw,17px);color:var(--white-70);line-height:1.85;margin-bottom:22px}
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.skill-card{background:var(--bg-3);border:1px solid var(--border);padding:28px 24px;border-radius:var(--r);transition:border-color .3s}
+.skill-card:hover{border-color:var(--gold-border)}
+.skill-card__icon{font-size:22px;margin-bottom:14px;display:block}
+.skill-card h3{font-family:var(--serif);font-size:18px;font-weight:700;margin-bottom:16px;color:var(--white)}
+.skill-bar{width:100%;height:1px;background:var(--border);margin-bottom:8px;overflow:hidden}
+.skill-bar__f{height:100%;background:var(--gold);width:0;transition:width 1.2s var(--expo)}
+.skill-card>span{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.tools-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px;padding-top:40px;border-top:1px solid var(--border)}
+.tool-pill{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--border);padding:8px 16px;border-radius:2px;color:var(--white-40);transition:all .2s}
+.tool-pill:hover{border-color:var(--gold-border);color:var(--gold)}
+/* TIMELINE */
+.timeline{position:relative;margin-top:60px}
+.timeline::before{content:'';position:absolute;left:96px;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--gold),transparent)}
+.tl-item{display:flex;align-items:flex-start;gap:48px;padding:36px 0;border-bottom:1px solid var(--border);position:relative;opacity:0;transform:translateX(-20px);transition:opacity .7s var(--expo),transform .7s var(--expo)}
+.tl-item.in{opacity:1;transform:none}
+.tl-item::before{content:'';position:absolute;left:96px;top:46px;width:9px;height:9px;border-radius:50%;background:var(--gold);transform:translateX(-50%);box-shadow:0 0 0 4px rgba(201,168,76,.18);z-index:1}
+.tl-year{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--gold);min-width:72px;padding-top:6px;flex-shrink:0}
+.tl-content{padding-left:60px}
+.tl-content h3{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--white);margin-bottom:10px}
+.tl-content p{font-size:14px;color:var(--white-40);line-height:1.75}
+/* CTA */
+.cta-band{background:var(--gold);padding:clamp(80px,10vw,130px) 0;position:relative;overflow:hidden;text-align:center}
+.cta-band__inner{position:relative;z-index:2}
+.cta-band__title{font-family:var(--serif);font-size:clamp(44px,7vw,90px);font-weight:700;line-height:.95;color:#080808;margin-bottom:44px}
+.cta-band__title em{font-style:italic;color:rgba(8,8,8,.6)}
+.cta-band .btn-primary{background:#080808;color:var(--gold)}.cta-band .btn-primary:hover{background:#111}
+.cta-band__note{display:block;margin-top:16px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:rgba(8,8,8,.45)}
+.cta-band__deco{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-evenly;font-family:var(--serif);font-size:clamp(100px,15vw,200px);font-weight:700;color:rgba(8,8,8,.05);letter-spacing:-.05em;pointer-events:none}
+/* FOOTER */
+.footer{background:#050505;border-top:1px solid var(--border);padding:clamp(64px,8vw,100px) 0 0}
+.footer__grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:48px;padding-bottom:60px}
+.footer__logo{font-family:var(--serif);font-size:40px;font-weight:700;color:var(--gold);letter-spacing:-.03em;line-height:1;margin-bottom:12px}
+.footer__brand-sub{font-size:14px;color:var(--white-40);line-height:1.7}
+.footer__tagline{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:rgba(242,239,232,.2);margin-top:14px}
+.footer__col h4{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
+.footer__col ul{display:flex;flex-direction:column;gap:12px}.footer__col a{font-size:14px;color:var(--white-40);transition:color .2s}.footer__col a:hover{color:var(--white)}
+.footer__bottom{border-top:1px solid var(--border);padding:24px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:rgba(242,239,232,.2)}
+@media(max-width:768px){.nav__links{display:none;flex-direction:column;gap:28px;position:fixed;inset:0;background:rgba(5,5,5,.97);backdrop-filter:blur(20px);align-items:center;justify-content:center;z-index:450}.nav__links.open{display:flex}.nav__hamburger{display:flex;z-index:460}.bio-grid{grid-template-columns:1fr}.bio-badge--1,.bio-badge--2{right:0}.skills-grid{grid-template-columns:1fr 1fr}.footer__grid{grid-template-columns:1fr 1fr}.timeline::before{left:56px}.tl-item{gap:20px}.tl-item::before{left:56px}.tl-year{min-width:40px}.tl-content{padding-left:12px}}
+@media(max-width:500px){.footer__grid{grid-template-columns:1fr}.cta-band__deco{display:none}.skills-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<div class="cursor" id="cur"></div>
+<div class="cursor-f" id="curf"></div>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav__logo">
+    <span class="nav__logo-mark">BM</span>
+    <span class="nav__logo-text">Britto MSN</span>
+  </a>
+  <button class="nav__hamburger" id="ham" aria-label="Menu"><span></span><span></span></button>
+  <ul class="nav__links" id="nl">
+    <li><a href="index.html"   class="nav__link">Home</a></li>
+    <li><a href="work.html"    class="nav__link">Work</a></li>
+    <li><a href="about.html"   class="nav__link active">About</a></li>
+    <li><a href="contact.html" class="nav__link">Contact</a></li>
+    <li><a href="contact.html" class="btn btn-nav">Hire Me</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <p class="page-hero__tag">The Designer</p>
+  <h1 class="page-hero__title">Behind<br>the <em>work.</em></h1>
+  <div class="page-hero__wm" aria-hidden="true">BRITTO MSN</div>
+</section>
+
+<!-- BIO -->
+<section class="section" style="background:var(--bg)">
+  <div class="container">
+    <div class="bio-grid">
+
+      <div class="bio-portrait reveal">
+        <div class="bio-portrait__frame">
+          <!-- Replace the initials block below with: <img src="your-photo.jpg" alt="Britto MSN"/> -->
+          <div class="bio-portrait__img">
+            <span class="bio-portrait__initials">BM</span>
+          </div>
+          <div class="bio-portrait__caption">
+            <span class="bio-portrait__name">Britto MSN</span>
+            <span class="bio-portrait__role">Creative Designer · Art Director · MFA</span>
+          </div>
+        </div>
+        <div class="bio-badge bio-badge--1 reveal"><span class="bio-badge__n">150+</span><span class="bio-badge__l">Projects</span></div>
+        <div class="bio-badge bio-badge--2 reveal"><span class="bio-badge__n">8+</span><span class="bio-badge__l">Years</span></div>
+      </div>
+
+      <div class="bio-text">
+        <span class="label">The Story</span>
+        <h2 class="reveal" style="font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:700;line-height:1.05;letter-spacing:-.02em;margin:16px 0 36px">
+          I didn't study design.<br><em style="color:var(--gold);font-style:italic">I studied meaning.</em>
+        </h2>
+        <p class="reveal" data-delay="0">I'm Britto MSN — a multidisciplinary creative designer operating at the intersection of fine art theory and commercial design practice. My work spans brand identity, graphic design, motion graphics, video editing, and rebranding — disciplines most creatives treat as separate, that I treat as one unified language.</p>
+        <p class="reveal" data-delay="100">I hold an MFA in Fine Arts — a credential that fundamentally shapes how I approach every brief. Most designers learn tools. I learned principles. The difference shows in work that doesn't just look contemporary — it holds up against time, scrutiny, and scale.</p>
+        <p class="reveal" data-delay="200">Eight years of practice means I've worked across industries, brand scales, and creative challenges. I've built identities from nothing. I've rescued brands that had lost their way. I've translated complex strategic ideas into visual systems that non-designers immediately understand.</p>
+        <p class="reveal" data-delay="300">I believe the best design work begins not at a screen, but with a question: what does this brand need to make people <em style="color:var(--gold)">feel</em>? Everything else — colour, form, motion, type — is the answer to that question.</p>
+        <a href="contact.html" class="btn btn-primary" style="margin-top:16px">Work With Me</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS & TOOLS -->
+<section class="section" style="background:var(--bg-2)">
+  <div class="container">
+    <span class="label reveal">Craft &amp; Expertise</span>
+    <h2 class="reveal" style="font-family:var(--serif);font-size:clamp(32px,4vw,56px);font-weight:700;line-height:1.05;letter-spacing:-.02em" data-delay="100">
+      The <em style="color:var(--gold);font-style:italic">toolkit.</em>
+    </h2>
+    <div class="skills-grid">
+      <div class="skill-card reveal" data-delay="0">
+        <span class="skill-card__icon">◈</span>
+        <h3>Brand Identity Design</h3>
+        <div class="skill-bar"><div class="skill-bar__f" data-w="97"></div></div>
+        <span>Expert · 8 Years</span>
+      </div>
+      <div class="skill-card reveal" data-delay="80">
+        <span class="skill-card__icon">↺</span>
+        <h3>Rebranding Strategy</h3>
+        <div class="skill-bar"><div class="skill-bar__f" data-w="95"></div></div>
+        <span>Expert · Strategic</span>
+      </div>
+      <div class="skill-card reveal" data-delay="160">
+        <span class="skill-card__icon">▦</span>
+        <h3>Graphic Design</h3>
+        <div class="skill-bar"><div class="skill-bar__f" data-w="96"></div></div>
+        <span>Expert · MFA-Trained</span>
+      </div>
+      <div class="skill-card reveal" data-delay="0">
+        <span class="skill-card__icon">⬡</span>
+        <h3>Motion Graphics</h3>
+        <div class="skill-bar"><div class="skill-bar__f" data-w="88"></div></div>
+        <span>Advanced</span>
+      </div>
+      <div class="skill-card reveal" data-delay="80">
+        <span class="skill-card__icon">▶</span>
+        <h3>Video Editing</h3>
+        <div class="skill-bar"><div class="skill-bar__f" data-w="85"></div></div>
+        <span>Advanced</span>
+      </div>
+      <div class="skill-card reveal" data-delay="160">
+        <span class="skill-card__icon">✦</span>
+        <h3>Art Direction</h3>
+        <div class="skill-bar"><div class="skill-bar__f" data-w="93"></div></div>
+        <span>Expert · Creative Lead</span>
+      </div>
+    </div>
+    <div class="tools-row reveal" data-delay="200">
+      <span class="tool-pill">Adobe Illustrator</span>
+      <span class="tool-pill">Photoshop</span>
+      <span class="tool-pill">InDesign</span>
+      <span class="tool-pill">After Effects</span>
+      <span class="tool-pill">Premiere Pro</span>
+      <span class="tool-pill">DaVinci Resolve</span>
+      <span class="tool-pill">Figma</span>
+      <span class="tool-pill">Lightroom</span>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="section" style="background:var(--bg)">
+  <div class="container">
+    <span class="label reveal">The Journey</span>
+    <h2 class="reveal" style="font-family:var(--serif);font-size:clamp(32px,4vw,56px);font-weight:700;line-height:1.05;letter-spacing:-.02em" data-delay="100">
+      How I <em style="color:var(--gold);font-style:italic">got here.</em>
+    </h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <span class="tl-year">2016</span>
+        <div class="tl-content"><h3>The Beginning</h3><p>Started as a graphic designer — learning the fundamentals of composition, typography, and visual communication. Built the discipline that every discipline after would depend on.</p></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">2018</span>
+        <div class="tl-content"><h3>First Brand System</h3><p>Delivered the first complete brand identity project. Understood that design at its best is a system, not a series of individual decisions — a principle that has governed every project since.</p></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">2020</span>
+        <div class="tl-content"><h3>MFA Completed</h3><p>Graduated with a Master of Fine Arts — deepening understanding of art history, visual theory, semiotics, and the philosophical foundations of design. Theory became the engine behind the practice.</p></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">2021</span>
+        <div class="tl-content"><h3>Expanded into Motion</h3><p>Added motion graphics and video editing to the practice. The same principles of narrative, rhythm, and composition that govern static design translate directly — and powerfully — to time-based media.</p></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">2022</span>
+        <div class="tl-content"><h3>Rebranding Specialisation</h3><p>Started focusing on rebranding — helping established businesses shed identities that no longer served them. This work is as much strategic therapy as visual design.</p></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">2025</span>
+        <div class="tl-content"><h3>Britto MSN Studio</h3><p>Formalised the practice. 8+ years. 150+ projects delivered. A clear creative point of view and the experience to defend every decision. The work continues to evolve — the standards never lower.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="cta-band__inner">
+    <span class="label" style="color:rgba(8,8,8,.5)">Collaborate</span>
+    <h2 class="cta-band__title">Ready to make<br><em>something great?</em></h2>
+    <a href="contact.html" class="btn btn-primary btn-lg">Start a Conversation</a>
+    <span class="cta-band__note">Available for select projects · Quick turnaround · Global clients welcome</span>
+  </div>
+  <div class="cta-band__deco" aria-hidden="true"><span>MFA</span><span>CRAFT</span><span>DESIGN</span></div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div><div class="footer__logo">BM</div><p class="footer__brand-sub">Britto MSN<br>Creative Designer · Art Director</p><p class="footer__tagline">Designing brands worth remembering.</p></div>
+      <div class="footer__col"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="work.html">Work</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer__col"><h4>Services</h4><ul><li><a href="work.html">Brand Identity</a></li><li><a href="work.html">Rebranding</a></li><li><a href="work.html">Motion Graphics</a></li><li><a href="work.html">Graphic Design</a></li><li><a href="work.html">Video Editing</a></li></ul></div>
+      <div class="footer__col"><h4>Connect</h4><ul><li><a href="#" target="_blank">Instagram</a></li><li><a href="#" target="_blank">Behance</a></li><li><a href="#" target="_blank">LinkedIn</a></li><li><a href="mailto:hello@brittomsn.com">hello@brittomsn.com</a></li></ul></div>
+    </div>
+    <div class="footer__bottom"><span>© 2025 Britto MSN · All Rights Reserved</span><span>MFA · 8+ Years · 150+ Projects</span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const cur=document.getElementById('cur'),curf=document.getElementById('curf');
+  if(cur&&curf){let mx=0,my=0,fx=0,fy=0;document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.cssText=`left:${mx}px;top:${my}px`});(function loop(){fx+=(mx-fx)*.1;fy+=(my-fy)*.1;curf.style.cssText=`left:${fx}px;top:${fy}px`;requestAnimationFrame(loop)})();document.querySelectorAll('a,button,.skill-card').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.classList.add('c-hover'));el.addEventListener('mouseleave',()=>document.body.classList.remove('c-hover'))});}
+  const nav=document.getElementById('nav');if(nav)window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>30),{passive:true});
+  const ham=document.getElementById('ham'),nl=document.getElementById('nl');
+  if(ham&&nl){ham.addEventListener('click',()=>{const o=nl.classList.toggle('open');const b=ham.querySelectorAll('span');b[0].style.transform=o?'rotate(45deg) translate(4px,4px)':'';b[1].style.transform=o?'rotate(-45deg) translate(4px,-4px)':'';});nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nl.classList.remove('open');ham.querySelectorAll('span').forEach(s=>s.style.transform='');}));}
+  // Reveal
+  const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,d=+(el.dataset.delay||0);setTimeout(()=>el.classList.add('in'),d);io.unobserve(el);});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  // Timeline stagger
+  document.querySelectorAll('.tl-item').forEach((el,i)=>{const tio=new IntersectionObserver(en=>{en.forEach(e=>{if(!e.isIntersecting)return;setTimeout(()=>el.classList.add('in'),i*120);tio.unobserve(el);});},{threshold:.15});tio.observe(el);});
+  // Skill bars
+  const sio=new IntersectionObserver(entries=>{entries.forEach(e=>{if(!e.isIntersecting)return;setTimeout(()=>{e.target.style.width=e.target.dataset.w+'%';},200);sio.unobserve(e.target);});},{threshold:.5});
+  document.querySelectorAll('.skill-bar__f').forEach(b=>sio.observe(b));
+})();
+</script>
+</body>
+</html>

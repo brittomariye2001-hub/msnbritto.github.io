@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Contact — Britto MSN | Start a Project</title>
+<meta name="description" content="Start a creative project with Britto MSN — brand identity, rebranding, motion graphics, graphic design, video editing. Based in India, working globally."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#080808;--bg-2:#0f0f0f;--bg-3:#161616;--gold:#C9A84C;--gold-light:#E2C06A;--gold-border:rgba(201,168,76,.25);--white:#F2EFE8;--white-70:rgba(242,239,232,.7);--white-40:rgba(242,239,232,.4);--border:rgba(242,239,232,.08);--serif:'Cormorant Garamond','Playfair Display',Georgia,serif;--mono:'DM Mono','Courier New',monospace;--sans:'Inter',system-ui,sans-serif;--nav-h:76px;--r:3px;--expo:cubic-bezier(.16,1,.3,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden}
+a{color:inherit;text-decoration:none}ul{list-style:none}button{font-family:inherit}
+.grain{position:fixed;inset:0;z-index:9000;pointer-events:none;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px 200px}
+.cursor{width:8px;height:8px;background:var(--gold);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:10000;transform:translate(-50%,-50%);transition:width .2s,height .2s;mix-blend-mode:difference}
+.cursor-f{width:32px;height:32px;border:1px solid var(--gold-border);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .3s var(--expo),height .3s var(--expo)}
+body.c-hover .cursor{width:18px;height:18px}body.c-hover .cursor-f{width:56px;height:56px;border-color:var(--gold)}
+.container{max-width:1320px;margin:0 auto;padding:0 clamp(24px,5vw,64px)}.section{padding:clamp(80px,10vw,140px) 0}
+.label{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:18px}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .9s var(--expo),transform .9s var(--expo)}.reveal.in{opacity:1;transform:none}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;border-radius:var(--r);cursor:none;position:relative;overflow:hidden;transition:all .3s var(--expo)}
+.btn::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,.07);transform:translateX(-110%) skewX(-10deg);transition:transform .45s var(--expo)}.btn:hover::after{transform:translateX(110%) skewX(-10deg)}
+.btn-primary{background:var(--gold);color:#080808;padding:15px 32px;font-weight:500}.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 10px 40px rgba(201,168,76,.3)}
+.btn-nav{border:1px solid var(--gold-border);color:var(--gold);padding:10px 22px;font-size:10px}.btn-nav:hover{background:var(--gold);color:#080808}
+.btn-lg{padding:19px 40px;font-size:12px}
+/* NAV */
+.nav{position:fixed;inset:0 0 auto;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(24px,5vw,64px);z-index:500;transition:background .4s}
+.nav.scrolled{background:rgba(8,8,8,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav__logo{display:flex;align-items:center;gap:14px}
+.nav__logo-mark{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--gold);letter-spacing:-.03em;line-height:1}
+.nav__logo-text{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--white-40);text-transform:uppercase;padding-left:14px;border-left:1px solid var(--border)}
+.nav__links{display:flex;align-items:center;gap:40px}
+.nav__link{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--white-40);transition:color .2s;position:relative}
+.nav__link::after{content:'';position:absolute;bottom:-5px;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--expo)}
+.nav__link:hover,.nav__link.active{color:var(--white)}.nav__link:hover::after,.nav__link.active::after{transform:scaleX(1)}
+.nav__hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:none;padding:6px}
+.nav__hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:all .3s}
+/* PAGE HERO */
+.page-hero{padding:calc(var(--nav-h) + 80px) clamp(24px,5vw,64px) 80px;max-width:1320px;margin:0 auto;position:relative;overflow:hidden}
+.page-hero__tag{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
+.page-hero__tag::before{content:'';display:block;width:28px;height:1px;background:var(--gold)}
+.page-hero__title{font-family:var(--serif);font-size:clamp(56px,9vw,116px);font-weight:700;line-height:.92;letter-spacing:-.03em;color:var(--white);margin-bottom:28px;opacity:0;transform:translateY(28px);animation:fadeUp .9s var(--expo) .15s forwards}
+.page-hero__title em{color:var(--gold);font-style:italic}
+.page-hero__sub{font-size:clamp(15px,1.5vw,18px);color:var(--white-70);max-width:540px;line-height:1.75;opacity:0;transform:translateY(16px);animation:fadeUp .7s var(--expo) .35s forwards}
+.page-hero__wm{position:absolute;right:-20px;bottom:-20px;font-family:var(--serif);font-size:clamp(80px,14vw,180px);font-weight:700;color:rgba(242,239,232,.025);letter-spacing:-.05em;pointer-events:none;white-space:nowrap;user-select:none}
+@keyframes fadeUp{to{opacity:1;transform:none}}
+/* CONTACT SECTION */
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(48px,6vw,100px);align-items:start}
+.contact-info p{font-size:clamp(15px,1.4vw,17px);color:var(--white-70);line-height:1.8;margin-bottom:40px}
+.cdetails{display:flex;flex-direction:column;gap:22px;margin-bottom:36px}
+.cdetail{display:flex;gap:16px;align-items:flex-start}
+.cdetail__icon{font-size:16px;flex-shrink:0;margin-top:3px}
+.cdetail__lbl{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.cdetail a,.cdetail span:last-child{font-size:14px;color:var(--white-70);transition:color .2s}
+.cdetail a:hover{color:var(--white)}
+.avail-badge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--border);padding:12px 20px;border-radius:100px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--white-40)}
+.avail-dot{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 3px rgba(74,222,128,.2);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 3px rgba(74,222,128,.2)}50%{box-shadow:0 0 0 6px rgba(74,222,128,.08)}}
+/* FORM */
+.cform-wrap{background:var(--bg-2);border:1px solid var(--border);border-radius:var(--r);padding:clamp(28px,4vw,48px)}
+.cform{display:flex;flex-direction:column;gap:22px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fg{display:flex;flex-direction:column;gap:8px}
+.fg label{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.fg label span{color:var(--gold)}
+.fg input,.fg select,.fg textarea{background:var(--bg-3);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;color:var(--white);font-family:var(--sans);font-size:14px;font-weight:300;outline:none;appearance:none;-webkit-appearance:none;transition:border-color .2s,box-shadow .2s}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(242,239,232,.2)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.1)}
+.fg select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C9A84C' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px;cursor:none}
+.fg select option{background:#161616;color:var(--white)}
+.fg textarea{resize:vertical;min-height:130px}
+.fcheck{display:flex;gap:12px;align-items:flex-start;cursor:none;font-size:13px;color:var(--white-40);line-height:1.6}
+.fcheck input[type="checkbox"]{display:none}
+.fcheck-box{width:18px;height:18px;flex-shrink:0;border:1px solid var(--border);border-radius:2px;position:relative;margin-top:2px;transition:all .2s}
+.fcheck input:checked~.fcheck-box{background:var(--gold);border-color:var(--gold)}
+.fcheck input:checked~.fcheck-box::after{content:'✓';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:10px;color:#080808;font-weight:700}
+.fsub{width:100%;justify-content:center;gap:12px}
+.fsub-arrow{transition:transform .3s}.fsub:hover .fsub-arrow{transform:translateX(5px)}
+.ffeedback{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-align:center;padding:12px;border-radius:var(--r);display:none}
+.ffeedback.ok{display:block;background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.25);color:#4ade80}
+.ffeedback.err{display:block;background:rgba(255,70,70,.08);border:1px solid rgba(255,70,70,.25);color:#ff4646}
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;margin-top:48px}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;width:100%;background:none;border:none;cursor:none;padding:26px 0;font-family:var(--serif);font-size:clamp(16px,1.6vw,20px);font-weight:700;color:var(--white);text-align:left;gap:24px;transition:color .2s}
+.faq-q:hover{color:var(--gold)}
+.faq-icon{font-size:22px;color:var(--gold);font-weight:300;line-height:1;flex-shrink:0;transition:transform .3s var(--expo)}
+.faq-q[aria-expanded="true"] .faq-icon{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--expo)}
+.faq-a.open{max-height:300px}
+.faq-a p{padding:0 0 26px;font-size:15px;color:var(--white-40);line-height:1.8}
+/* FOOTER */
+.footer{background:#050505;border-top:1px solid var(--border);padding:clamp(64px,8vw,100px) 0 0}
+.footer__grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:48px;padding-bottom:60px}
+.footer__logo{font-family:var(--serif);font-size:40px;font-weight:700;color:var(--gold);letter-spacing:-.03em;line-height:1;margin-bottom:12px}
+.footer__brand-sub{font-size:14px;color:var(--white-40);line-height:1.7}
+.footer__tagline{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:rgba(242,239,232,.2);margin-top:14px}
+.footer__col h4{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
+.footer__col ul{display:flex;flex-direction:column;gap:12px}.footer__col a{font-size:14px;color:var(--white-40);transition:color .2s}.footer__col a:hover{color:var(--white)}
+.footer__bottom{border-top:1px solid var(--border);padding:24px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:rgba(242,239,232,.2)}
+@media(max-width:768px){.nav__links{display:none;flex-direction:column;gap:28px;position:fixed;inset:0;background:rgba(5,5,5,.97);backdrop-filter:blur(20px);align-items:center;justify-content:center;z-index:450}.nav__links.open{display:flex}.nav__hamburger{display:flex;z-index:460}.contact-grid{grid-template-columns:1fr}.frow{grid-template-columns:1fr}.footer__grid{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.footer__grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<div class="cursor" id="cur"></div>
+<div class="cursor-f" id="curf"></div>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav__logo">
+    <span class="nav__logo-mark">BM</span>
+    <span class="nav__logo-text">Britto MSN</span>
+  </a>
+  <button class="nav__hamburger" id="ham" aria-label="Menu"><span></span><span></span></button>
+  <ul class="nav__links" id="nl">
+    <li><a href="index.html"   class="nav__link">Home</a></li>
+    <li><a href="work.html"    class="nav__link">Work</a></li>
+    <li><a href="about.html"   class="nav__link">About</a></li>
+    <li><a href="contact.html" class="nav__link active">Contact</a></li>
+    <li><a href="contact.html" class="btn btn-nav">Hire Me</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <p class="page-hero__tag">Let's Connect</p>
+  <h1 class="page-hero__title">Start a<br><em>project.</em></h1>
+  <p class="page-hero__sub">Tell me what you're building. I'll tell you exactly how to make it unforgettable.</p>
+  <div class="page-hero__wm" aria-hidden="true">CONTACT</div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="section" style="background:var(--bg)">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- LEFT: INFO -->
+      <div class="contact-info">
+        <span class="label reveal">Get in Touch</span>
+        <h2 class="reveal" style="font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:700;line-height:1.05;letter-spacing:-.02em;margin:16px 0 28px" data-delay="100">
+          Let's make<br><em style="color:var(--gold);font-style:italic">something real.</em>
+        </h2>
+        <p class="reveal" data-delay="180">Whether you're launching a new brand, rethinking an existing one, or need a creative partner who brings both strategic clarity and technical depth — I'd like to hear about your project. No brief is too small or too ambitious.</p>
+
+        <div class="cdetails reveal" data-delay="250">
+          <div class="cdetail">
+            <span class="cdetail__icon">📧</span>
+            <div>
+              <span class="cdetail__lbl">Email</span>
+              <!-- Update this with your real email -->
+              <a href="/cdn-cgi/l/email-protection#87efe2ebebe8c7e5f5eef3f3e8eaf4e9a9e4e8ea"><span class="__cf_email__" data-cfemail="f69e939a9a99b694849f8282999b8598d895999b">[email&#160;protected]</span></a>
+            </div>
+          </div>
+          <div class="cdetail">
+            <span class="cdetail__icon">📸</span>
+            <div>
+              <span class="cdetail__lbl">Instagram</span>
+              <!-- Update with your real handle -->
+              <a href="#" target="_blank">@brittomsn</a>
+            </div>
+          </div>
+          <div class="cdetail">
+            <span class="cdetail__icon">💼</span>
+            <div>
+              <span class="cdetail__lbl">Behance / LinkedIn</span>
+              <!-- Update with your real profiles -->
+              <a href="#" target="_blank">View Profiles</a>
+            </div>
+          </div>
+          <div class="cdetail">
+            <span class="cdetail__icon">📍</span>
+            <div>
+              <span class="cdetail__lbl">Based in</span>
+              <span>India · Available for Global Projects</span>
+            </div>
+          </div>
+          <div class="cdetail">
+            <span class="cdetail__icon">⏱</span>
+            <div>
+              <span class="cdetail__lbl">Response Time</span>
+              <span>Usually within 24 hours</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="avail-badge reveal" data-delay="350">
+          <div class="avail-dot"></div>
+          <span>Currently accepting new projects · 2025</span>
+        </div>
+      </div>
+
+      <!-- RIGHT: FORM -->
+      <div class="cform-wrap reveal" data-delay="100">
+        <form class="cform" id="cform" novalidate action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+          <div class="frow">
+            <div class="fg">
+              <label for="fn">Full Name <span>*</span></label>
+              <input type="text" id="fn" name="name" placeholder="Your name" required/>
+            </div>
+            <div class="fg">
+              <label for="fe">Email Address <span>*</span></label>
+              <input type="email" id="fe" name="email" placeholder="your@email.com" required/>
+            </div>
+          </div>
+
+          <div class="fg">
+            <label for="fpt">Project Type <span>*</span></label>
+            <select id="fpt" name="projectType" required>
+              <option value="" disabled selected>What do you need?</option>
+              <option>Brand Identity (New)</option>
+              <option>Rebranding / Identity Refresh</option>
+              <option>Graphic Design</option>
+              <option>Motion Graphics</option>
+              <option>Video Editing / Post-Production</option>
+              <option>Art Direction</option>
+              <option>Full Creative Partnership</option>
+              <option>Not Sure Yet — Let's Talk</option>
+            </select>
+          </div>
+
+          <div class="fg">
+            <label for="fb2">Budget Range</label>
+            <select id="fb2" name="budget">
+              <option value="" disabled selected>Select your budget</option>
+              <option>Under ₹25,000</option>
+              <option>₹25,000 – ₹75,000</option>
+              <option>₹75,000 – ₹1,50,000</option>
+              <option>₹1,50,000 – ₹3,00,000</option>
+              <option>₹3,00,000+</option>
+              <option>International — Let's discuss</option>
+            </select>
+          </div>
+
+          <div class="fg">
+            <label for="fm">Tell Me About Your Project <span>*</span></label>
+            <textarea id="fm" name="message" placeholder="What are you building? Who's the audience? What's broken, missing, or ready to be elevated? Share references if you have them." required></textarea>
+          </div>
+
+          <label class="fcheck">
+            <input type="checkbox" id="fa" required/>
+            <div class="fcheck-box"></div>
+            <span>I understand response time is ~24 hours and project slots are limited each quarter.</span>
+          </label>
+
+          <button type="submit" class="btn btn-primary btn-lg fsub" id="fsb">
+            <span class="fsb-t">Send Message</span>
+            <span class="fsub-arrow">→</span>
+          </button>
+
+          <div class="ffeedback" id="fb" aria-live="polite"></div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background:var(--bg-2)">
+  <div class="container">
+    <span class="label reveal">Common Questions</span>
+    <h2 class="reveal" style="font-family:var(--serif);font-size:clamp(32px,4vw,56px);font-weight:700;line-height:1.05;letter-spacing:-.02em" data-delay="100">
+      Before <em style="color:var(--gold);font-style:italic">you ask.</em>
+    </h2>
+    <div class="faq-list">
+
+      <div class="faq-item reveal" data-delay="0">
+        <button class="faq-q" aria-expanded="false">
+          <span>How long does a brand identity project take?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>A complete brand identity system typically takes 3–6 weeks — from discovery to final delivery. Focused scope projects can be faster. Rush delivery is available at a premium rate.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal" data-delay="60">
+        <button class="faq-q" aria-expanded="false">
+          <span>Do you work with international clients?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Yes. I work remotely with clients globally. Time zones have never been a barrier to great creative work. Most client communication happens asynchronously with regular video check-ins at key milestones.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal" data-delay="120">
+        <button class="faq-q" aria-expanded="false">
+          <span>What does a rebranding engagement include?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Typically: a brand audit, strategic repositioning, new visual identity system, and a comprehensive brand guidelines document. Larger engagements include campaign launch assets, motion guidelines, and digital asset libraries.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal" data-delay="180">
+        <button class="faq-q" aria-expanded="false">
+          <span>How many revisions are included?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Two rounds of structured revisions are included in all projects. My first presentations are thorough — I present with rationale so clients understand each decision, which means revisions are usually minor refinements, not directional changes.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal" data-delay="240">
+        <button class="faq-q" aria-expanded="false">
+          <span>Can you manage a project end-to-end?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Yes. My multidisciplinary background means I can manage brand strategy, graphic design, motion, and video under one creative direction — ensuring visual consistency that most studios struggle to maintain across disciplines.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal" data-delay="300">
+        <button class="faq-q" aria-expanded="false">
+          <span>What is your payment structure?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>50% at project kickoff, 50% upon final delivery. For larger engagements, milestone-based billing is available. Payment via UPI, bank transfer, or PayPal for international clients.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div><div class="footer__logo">BM</div><p class="footer__brand-sub">Britto MSN<br>Creative Designer · Art Director</p><p class="footer__tagline">Designing brands worth remembering.</p></div>
+      <div class="footer__col"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="work.html">Work</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer__col"><h4>Services</h4><ul><li><a href="work.html">Brand Identity</a></li><li><a href="work.html">Rebranding</a></li><li><a href="work.html">Motion Graphics</a></li><li><a href="work.html">Graphic Design</a></li><li><a href="work.html">Video Editing</a></li></ul></div>
+      <div class="footer__col"><h4>Connect</h4><ul><li><a href="#" target="_blank">Instagram</a></li><li><a href="#" target="_blank">Behance</a></li><li><a href="#" target="_blank">LinkedIn</a></li><li><a href="/cdn-cgi/l/email-protection#96fef3fafaf9d6f4e4ffe2e2f9fbe5f8b8f5f9fb"><span class="__cf_email__" data-cfemail="3b535e5757547b5949524f4f5456485515585456">[email&#160;protected]</span></a></li></ul></div>
+    </div>
+    <div class="footer__bottom"><span>© 2025 Britto MSN · All Rights Reserved</span><span>MFA · 8+ Years · 150+ Projects</span></div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+(function(){
+  const cur=document.getElementById('cur'),curf=document.getElementById('curf');
+  if(cur&&curf){document.body.style.cursor="none";let mx=0,my=0,fx=0,fy=0;document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.cssText=`left:${mx}px;top:${my}px`});(function loop(){fx+=(mx-fx)*.1;fy+=(my-fy)*.1;curf.style.cssText=`left:${fx}px;top:${fy}px`;requestAnimationFrame(loop)})();document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.classList.add('c-hover'));el.addEventListener('mouseleave',()=>document.body.classList.remove('c-hover'))});}
+  const nav=document.getElementById('nav');if(nav)window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>30),{passive:true});
+  const ham=document.getElementById('ham'),nl=document.getElementById('nl');
+  if(ham&&nl){ham.addEventListener('click',()=>{const o=nl.classList.toggle('open');const b=ham.querySelectorAll('span');b[0].style.transform=o?'rotate(45deg) translate(4px,4px)':'';b[1].style.transform=o?'rotate(-45deg) translate(4px,-4px)':'';});nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nl.classList.remove('open');ham.querySelectorAll('span').forEach(s=>s.style.transform='');}));}
+  // Reveal
+  const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,d=+(el.dataset.delay||0);setTimeout(()=>el.classList.add('in'),d);io.unobserve(el);});},{threshold:0,rootMargin:'0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  // Fallback: force-show all reveals after 600ms in case IO doesn't fire (preview/iframe)
+  setTimeout(()=>document.querySelectorAll('.reveal:not(.in)').forEach(el=>el.classList.add('in')),600);
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const open=btn.getAttribute('aria-expanded')==='true';document.querySelectorAll('.faq-q').forEach(b=>{b.setAttribute('aria-expanded','false');b.nextElementSibling?.classList.remove('open');});if(!open){btn.setAttribute('aria-expanded','true');btn.nextElementSibling?.classList.add('open');}});});
+  // ── CONTACT FORM — Formspree (real email delivery) ──
+  // STEP 1: Go to https://formspree.io and sign up (free)
+  // STEP 2: Click "New Form" → give it a name → copy your Form ID
+  // STEP 3: In the <form> tag above, replace YOUR_FORM_ID with your actual ID
+  // Example: action="https://formspree.io/f/abcdefgh"
+  const form=document.getElementById('cform');
+  if(form){
+    form.addEventListener('submit',async function(e){
+      e.preventDefault();
+      const fb=document.getElementById('fb');
+      const sb=document.getElementById('fsb');
+      const n=form.querySelector('#fn').value.trim();
+      const em=form.querySelector('#fe').value.trim();
+      const pt=form.querySelector('#fpt').value;
+      const ms=form.querySelector('#fm').value.trim();
+      const ag=form.querySelector('#fa').checked;
+      const emailOk=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em);
+      if(!n||!em||!pt||!ms){return showFb('err','Please fill in all required fields.');}
+      if(!emailOk){return showFb('err','Please enter a valid email address.');}
+      if(!ag){return showFb('err','Please tick the checkbox to continue.');}
+      sb.disabled=true;
+      sb.querySelector('.fsb-t').textContent='Sending…';
+      try{
+        const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+        if(res.ok){
+          showFb('ok','\u2713 Message sent! I\'ll be in touch within 24 hours.');
+          form.reset();
+        } else {
+          const data=await res.json().catch(()=>({}));
+          showFb('err',(data.errors&&data.errors.map(x=>x.message).join(', '))||'Something went wrong. Please email me directly.');
+        }
+      } catch(err){
+        showFb('err','Network error — please email me directly.');
+      } finally {
+        sb.disabled=false;
+        sb.querySelector('.fsb-t').textContent='Send Message';
+      }
+      function showFb(t,m){
+        fb.className='ffeedback '+t;
+        fb.textContent=m;
+        if(t!=='ok') setTimeout(()=>{fb.className='ffeedback';fb.textContent='';},6000);
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>
